@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - MetaBiome</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <span class="logo-text">MetaBiome</span>
+            </div>
+            <div class="header-buttons">
+                <button class="btn btn-ghost" id="user-button">
+                    <i class="fas fa-user"></i>
+                </button>
+                <button class="btn btn-ghost" id="settings-button">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Welcome Section -->
+        <div class="welcome-section">
+            <h1 id="welcome-title">Welcome back! 🌟</h1>
+            <p>Let's continue your journey of growth and self-discovery</p>
+        </div>
+
+        <!-- Progress Overview -->
+        <div class="progress-grid">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <i class="fas fa-bullseye" style="color: #ec4899;"></i>
+                        Today's Progress
+                    </h3>
+                </div>
+                <div class="card-content">
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">Daily Tasks</span>
+                            <span class="progress-value" id="daily-progress">3/5</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" id="daily-progress-bar" style="width: 60%"></div>
+                        </div>
+                        <div class="progress-badges">
+                            <span class="badge badge-success">Mood Check ✓</span>
+                            <span class="badge badge-success">Gratitude ✓</span>
+                            <span class="badge badge-outline">Exercise</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <i class="fas fa-chart-line" style="color: #22c55e;"></i>
+                        Weekly Goal Progress
+                    </h3>
+                </div>
+                <div class="card-content">
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">This Week</span>
+                            <span class="progress-value" id="weekly-progress">75%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" id="weekly-progress-bar" style="width: 75%"></div>
+                        </div>
+                        <p class="progress-note">Great progress! You're building healthy habits consistently.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Today's Mood & Move Check-in -->
+        <div class="card mood-card">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <i class="fas fa-heart" style="color: #ec4899;"></i>
+                    Today's Mood & Move Check-in
+                </h3>
+            </div>
+            <div class="card-content">
+                <div class="mood-section">
+                    <p class="mood-question">How are you feeling today?</p>
+                    <div class="mood-buttons">
+                        <button class="mood-button" data-mood="happy">
+                            <i class="fas fa-smile"></i>
+                            Great
+                        </button>
+                        <button class="mood-button" data-mood="neutral">
+                            <i class="fas fa-meh"></i>
+                            Okay
+                        </button>
+                        <button class="mood-button" data-mood="sad">
+                            <i class="fas fa-frown"></i>
+                            Struggling
+                        </button>
+                    </div>
+                    <div id="mood-feedback" class="mood-feedback" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <a href="mood.html" class="action-card pink">
+                <div class="action-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Mood & Move</h3>
+                <p>Daily check-in</p>
+            </a>
+
+            <a href="journal.html" class="action-card green">
+                <div class="action-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3>Gratitude</h3>
+                <p>Journal entries</p>
+            </a>
+
+            <a href="exercise.html" class="action-card blue">
+                <div class="action-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h3>Exercise Task</h3>
+                <p>Daily workouts</p>
+            </a>
+
+            <a href="learn.html" class="action-card yellow">
+                <div class="action-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3>Learn</h3>
+                <p>Knowledge garden</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="nav-bottom">
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link active">
+                        <i class="fas fa-home nav-icon"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="progress.html" class="nav-link">
+                        <i class="fas fa-chart-line nav-icon"></i>
+                        <span>Progress</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="journal.html" class="nav-link">
+                        <i class="fas fa-book-open nav-icon"></i>
+                        <span>Journal</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="learn.html" class="nav-link">
+                        <i class="fas fa-leaf nav-icon"></i>
+                        <span>Learn</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src="dashboard.js"></script>
+</body>
+</html> 

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to MetaBiome - Onboarding</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="onboarding-container">
+        <div class="onboarding-card">
+            <div class="onboarding-header">
+                <div class="onboarding-logo">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h1>Welcome to MetaBiome</h1>
+                <p>Let's personalize your journey</p>
+            </div>
+
+            <div class="onboarding-content">
+                <!-- Step 1: Name and Age -->
+                <div id="step-1" class="onboarding-step active">
+                    <div class="form-group">
+                        <label for="name" class="form-label">What should we call you?</label>
+                        <input type="text" id="name" class="form-input" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="age" class="form-label">How old are you?</label>
+                        <input type="number" id="age" class="form-input" placeholder="Your age">
+                    </div>
+                </div>
+
+                <!-- Step 2: Goals Selection -->
+                <div id="step-2" class="onboarding-step">
+                    <div class="form-group">
+                        <label class="form-label">What would you like to focus on?</label>
+                        <p class="form-hint">Select all that apply</p>
+                    </div>
+                    <div class="goals-grid">
+                        <button class="goal-button" data-goal="Building self-confidence">
+                            Building self-confidence
+                        </button>
+                        <button class="goal-button" data-goal="Managing stress and anxiety">
+                            Managing stress and anxiety
+                        </button>
+                        <button class="goal-button" data-goal="Developing healthy habits">
+                            Developing healthy habits
+                        </button>
+                        <button class="goal-button" data-goal="Understanding body changes">
+                            Understanding body changes
+                        </button>
+                        <button class="goal-button" data-goal="Improving body image">
+                            Improving body image
+                        </button>
+                        <button class="goal-button" data-goal="Learning about nutrition">
+                            Learning about nutrition
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Completion -->
+                <div id="step-3" class="onboarding-step">
+                    <div class="completion-content">
+                        <div class="completion-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 id="completion-name">You're all set! 🌟</h3>
+                        <p class="completion-text">
+                            We've created a personalized journey just for you. Remember, this is a safe space for growth and
+                            self-discovery at your own pace.
+                        </p>
+                        <div class="completion-note">
+                            <p>💚 Your privacy and wellbeing are our top priorities. You're in control of your journey.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress indicators -->
+                <div class="onboarding-progress">
+                    <div class="progress-dots">
+                        <div class="progress-dot active" data-step="1"></div>
+                        <div class="progress-dot" data-step="2"></div>
+                        <div class="progress-dot" data-step="3"></div>
+                    </div>
+                    <button id="next-button" class="btn btn-primary">
+                        Next
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="onboarding.js"></script>
+</body>
+</html> 
